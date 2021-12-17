@@ -1,0 +1,46 @@
+$screen-small: 500px;
+$screen-tablet: 900px;
+$screen-medium: 1024px;
+$screen-large: 1400px;
+
+@mixin xs {
+    @media (max-width: #{$screen-small}) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media (max-width: #{$screen-tablet}) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (max-width: #{$screen-medium}) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media (max-width: #{$screen-large}) {
+        @content;
+    }
+}
+
+@mixin mq($screen) {
+    @media (min-width: $screen+"px") {
+        @content;
+    }
+}
+
+@mixin mqMax($screen) {
+    @media (max-width: $screen+"px") {
+        @content;
+    }
+}
+
+html, body {
+    @include sm {
+		font-size: 40%;
+	}
+}
