@@ -93,6 +93,10 @@ main {
     @include mqMax (1366) {
         margin: 5rem 5rem 0;
     }
+
+    @include mq (1920) {
+        font-size: 3rem;
+    }
 }
 
 .legend {
